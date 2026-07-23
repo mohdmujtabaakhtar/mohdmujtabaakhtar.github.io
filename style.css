@@ -451,16 +451,19 @@ header{
 
 @media (max-width: 820px){
   .profile-section{ grid-template-columns:minmax(0,1fr) }
+
+  /* `order` applies to the grid child itself, not to what's inside it —
+     so it goes on .profile-right, not .photo-card. */
+  .profile-right{ order:-1 }
   .photo-card{
     position:static;
-    max-width:280px;
-    order:-1;            /* portrait first on narrow screens */
-    margin-bottom:1rem;
+    max-width:240px;
+    margin-bottom:1.5rem;
   }
   .address-badge{ text-align:left }
 
   .sel-card{ grid-template-columns:minmax(0,1fr) }
-  .sel-thumb{ max-width:220px }
+  .sel-thumb{ max-width:200px }
 
   /* collapse the desktop nav into a toggle */
   #nav-toggle{ display:inline-flex; order:3 }
@@ -492,8 +495,17 @@ header{
   .news-list li{ grid-template-columns:minmax(0,1fr); gap:.2rem }
   .news-date{ padding-top:0 }
   .social a{ width:38px }
-  .sel-thumb{ max-width:100% }
   .pub-venue{ margin-bottom:.4rem }
+
+  /* portrait: present but not dominating */
+  .photo-card{ max-width:180px }
+  .photo-card img{ aspect-ratio:1/1 }
+
+  /* paper figures sit beside the text so titles lead the section */
+  .sel-card{ grid-template-columns:76px minmax(0,1fr); gap:.9rem }
+  .sel-thumb{ max-width:100% }
+  .venue-ribbon{ font-size:.5rem; letter-spacing:.03em; padding:.2rem }
+  .sel-title{ font-size:.95rem }
 }
 
 @media print{

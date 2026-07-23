@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohd Mujtaba Akhtar</title>
+<meta name="description" content="Mohd Mujtaba Akhtar — research on geometry-aware representation learning for speech, synthetic-media forensics, and clinical speech AI.">
+
+<!-- set theme before first paint so dark mode never flashes white -->
+<script>
+  (function(){
+    try{
+      var t = localStorage.getItem('mma-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    }catch(e){}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container header-flex">
+    <div class="brand">
+      <a class="brand-link" href="#about" data-section="about">
+        <span class="brand-first">Mujtaba</span> <span class="brand-last">Akhtar</span>
+      </a>
+    </div>
+
+    <div class="social">
+      <a href="mailto:mmakhtar.research@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://scholar.google.com/citations?user=bwHU6i8AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+      <a href="https://github.com/mohdmujtabaakhtar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/mohd-mujtaba-akhtar-b6bb77201/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <button id="nav-toggle" class="icon-btn" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <button id="toggle-theme" class="icon-btn" aria-label="Toggle dark mode" aria-pressed="false">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#about"        class="nav-link active" data-section="about">about</a>
+      <a href="#publications" class="nav-link"        data-section="publications">publications</a>
+      <a href="#awards"       class="nav-link"        data-section="awards">awards</a>
+      <a href="#news"         class="nav-link"        data-section="news">news</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section class="profile-section spa-section" id="about">
+  <div class="profile-left">
+
+    <h1 class="name">
+      <span class="name-first">Mohd Mujtaba</span> <span class="name-last">Akhtar</span>
+    </h1>
+
+    <p class="role-tag">
+      Speech &amp; Audio AI &nbsp;·&nbsp;
+      <a href="mailto:mmakhtar.research@gmail.com">mmakhtar.research@gmail.com</a>
+    </p>
+
+    <p class="lede">
+  I'm a postgraduate researcher at <span class="hl">Ulster University</span>, working with
+  Dr Muskaan Singh, and previously a research associate at <span class="hl">IIIT-Delhi</span>.
+  My work asks a single question in many settings: what happens when we stop assuming that
+  representations of speech and physiological signals live in flat Euclidean space.
+</p>
+
+<p>
+  Foundation models produce embeddings with real structure — hierarchies of generator
+  families, angular periodicities left by vocoders, manifolds of clinical severity. I build
+  <span class="hl">geometry-aware methods</span> that respect that structure, using hyperbolic
+  and spherical embeddings, mixed-curvature projections, optimal transport and disentangled
+  multimodal alignment, and I test whether they buy genuine generalisation rather than
+  benchmark gains.
+</p>
+
+<p>
+  In practice this runs along two tracks. In <span class="hl">synthetic-media forensics</span>
+  I work on detecting and attributing generated speech across unseen generators, neural audio
+  codecs, languages and speakers — and on the benchmarks the field needs to measure that
+  honestly, including healthcare, Indic and South-East Asian codec-deepfake datasets. In
+  <span class="hl">health and paralinguistic speech</span> the same machinery supports
+  cross-lingual Alzheimer's detection, oro-facial neurological assessment, tuberculosis
+  screening from cough, heart-sound analysis and emotion recognition in low-resource languages.
+</p>
+
+<p>
+  This work appears at ACL, EACL, IJCAI, INTERSPEECH, ICASSP and EUSIPCO, and in ACM
+  Transactions on Computing for Healthcare. DIVINE received the
+  <span class="hl">Social Impact Award at EACL 2026</span>. I serve on the programme committee
+  for IMPACT-SPEECH 2026 at EMNLP and review for ACM MM, ICASSP and ICME.
+</p>
+
+    <div class="callout">
+      <strong>Seeking PhD positions for Fall 2026.</strong> I'm looking for groups working on
+      speech foundation models, non-Euclidean representation learning, or speech-driven health
+      technology. Happy to hear from potential collaborators either way —
+      <a href="mailto:mmakhtar.research@gmail.com">get in touch</a>.
+    </div>
+
+    <div class="callout">
+      <strong>Undergraduates:</strong> if you'd like to work together, email me a brief plan —
+      two or three research questions and a short feasibility check — along with where you think
+      I could be useful.
+    </div>
+
+    <h2 class="section-label">Research interests</h2>
+    <ul class="about-list">
+      <li>Geometric deep learning</li>
+      <li>Synthetic speech forensics</li>
+      <li>Speech foundation models</li>
+      <li>Emotional speech understanding</li>
+      <li>Clinical speech analysis</li>
+      <li>Multimodal alignment</li>
+    </ul>
+
+    <!-- news teaser -->
+    <h2 class="section-label">Recent</h2>
+    <ul class="news-list">
+      <li><span class="news-date">May 2026</span>
+        <span><a href="#publications" class="nav-jump">Four papers</a> accepted at INTERSPEECH 2026 as first author.</span></li>
+      <li><span class="news-date">May 2026</span>
+        <span><a href="#publications" class="nav-jump">Three papers</a> accepted at ACL 2026 (1 Main, 2 Findings).</span></li>
+      <li><span class="news-date">Apr 2026</span>
+        <span><a href="#publications" class="nav-jump">One paper</a> accepted at IJCAI 2026 as first author.</span></li>
+      <li><span class="news-date">Feb 2026</span>
+        <span>Social Impact Award at EACL 2026 for DIVINE.</span></li>
+      <li><span class="news-date">Jun 2025</span>
+        <span><a href="#publications" class="nav-jump">Seven papers</a> accepted at INTERSPEECH 2025.</span></li>
+    </ul>
+    <p class="news-more"><a href="#news" class="nav-jump">All news →</a></p>
+
+    <!-- selected publications -->
+    <h2 class="section-label">Selected publications</h2>
+    <ul class="selected-list">
+
+      <li class="sel-card">
+        <div class="sel-thumb">
+          <img src="images/ORBIT_page-0001.jpeg" alt="Figure from the ORBIT paper">
+          <span class="venue-ribbon">INTERSPEECH 2026</span>
+        </div>
+        <div class="sel-meta">
+          <h3 class="sel-title">
+            <a href="https://arxiv.org/abs/2606.17254" target="_blank" rel="noopener">
+              Synergizing Zero-Shot Cross-Lingual Alzheimer Detection with Language-Invariant Multimodal Bi-Geometric Adversarial Learning
+            </a>
+          </h3>
+          <p class="sel-authors">
+            <strong class="me">Mohd Mujtaba Akhtar</strong>, Girish, Farhan Sheth, Muskaan Singh,
+            Juliana Gerard, Paula McClean, KongFatt Wong-Lin
+          </p>
+          <div class="sel-actions">
+            <span class="chip soft">INTERSPEECH 2026</span>
+            <a class="pdf-badge" href="https://arxiv.org/pdf/2606.17254" target="_blank" rel="noopener">PDF</a>
+            <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+          </div>
+          <div class="abstract-box">
+            <p>We study zero-shot cross-lingual speech-based Alzheimer's disease detection. We hypothesise that learning language-invariant multimodal representations by fusing multilingual speech and text pretrained models is essential for reliable transfer to unseen languages, as the two modalities capture complementary acoustic and linguistic markers of cognitive impairment while adversarial learning suppresses language-specific confounds. We propose ORBIT, which combines cross-attentive fusion, multi-tap language adversaries, and complementary spherical–hyperbolic geometric learning with consensus clustering. Across settings, ORBIT achieves the strongest performance compared to unimodal models and concatenation-based fusion baselines.</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="sel-card">
+        <div class="sel-thumb">
+          <img src="images/DIVINE_page-0001.jpeg" alt="Figure from the DIVINE paper">
+          <span class="venue-ribbon">EACL 2026</span>
+        </div>
+        <div class="sel-meta">
+          <h3 class="sel-title">
+            <a href="https://arxiv.org/abs/2601.07014" target="_blank" rel="noopener">
+              DIVINE: Coordinating Multimodal Disentangled Representations for Oro-Facial Neurological Disorder Assessment
+            </a>
+          </h3>
+          <p class="sel-authors">
+            <strong class="me">Mohd Mujtaba Akhtar</strong>, Girish, Muskaan Singh
+          </p>
+          <div class="sel-actions">
+            <span class="chip soft">EACL 2026</span>
+            <span class="chip award">Social Impact Award</span>
+            <a class="pdf-badge" href="https://arxiv.org/pdf/2601.07014" target="_blank" rel="noopener">PDF</a>
+            <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+          </div>
+          <div class="abstract-box">
+            <p>We present a multimodal framework for predicting neuro-facial disorders by capturing both vocal and facial cues. We hypothesise that explicitly disentangling shared and modality-specific representations within multimodal foundation model embeddings can enhance clinical interpretability and generalisation. DIVINE operates on representations from state-of-the-art audio and video foundation models, incorporating hierarchical variational bottlenecks, sparse gated fusion and learnable symptom tokens, in a multitask setup that jointly predicts diagnostic category and severity. Evaluated on the Toronto NeuroFace dataset, DeepSeek-VL2 with TRILLsson reaches 98.26% accuracy and 97.51% F1, with strong generalisation under audio-only and video-only conditions.</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="sel-card">
+        <div class="sel-thumb">
+          <img src="images/NOVA-ARC_page-0001.jpeg" alt="Figure from the NOVA-ARC paper">
+          <span class="venue-ribbon">ACL 2026</span>
+        </div>
+        <div class="sel-meta">
+          <h3 class="sel-title">
+            <a href="https://arxiv.org/abs/2604.17647" target="_blank" rel="noopener">
+              Prosody as Supervision: Bridging the Non-Verbal–Verbal Gap for Multilingual Speech Emotion Recognition
+            </a>
+          </h3>
+          <p class="sel-authors">
+            <strong class="me">Mohd Mujtaba Akhtar</strong>, Girish, Muskaan Singh
+          </p>
+          <div class="sel-actions">
+            <span class="chip soft">ACL 2026</span>
+            <a class="pdf-badge" href="https://arxiv.org/pdf/2604.17647" target="_blank" rel="noopener">PDF</a>
+            <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+          </div>
+          <div class="abstract-box">
+            <p>We introduce a paralinguistic-supervision paradigm for low-resource multilingual speech emotion recognition that leverages non-verbal vocalisations to exploit prosody-centric emotion cues, reformulating the task as non-verbal-to-verbal transfer. NOVA-ARC is a geometry-aware framework that models affective structure in the Poincaré ball, discretises paralinguistic patterns via a hyperbolic vector-quantised prosody codebook, and captures emotion intensity through a hyperbolic emotion lens. For unsupervised adaptation it performs optimal-transport prototype alignment between source emotion prototypes and target utterances, stabilised through consistency regularisation. NOVA-ARC consistently outperforms Euclidean counterparts and strong SSL baselines.</p>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="profile-right">
+    <figure class="photo-card">
+      <!-- NOTE: rename the file to remove spaces, e.g. images/akhtar.png -->
+      <img src="images/Portfolioimage.jpg" alt="Mohd Mujtaba Akhtar">
+      <figcaption class="address-badge">
+  Postgraduate Researcher<br>
+  Ulster University (remote)<br>
+  New Delhi, India
+</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════════ PUBLICATIONS ══════════════ -->
+<section class="section spa-section" id="publications" hidden>
+  <h2 class="pub-heading">Conference publications</h2>
+  <p class="pub-subline">Reverse chronological · * denotes equal contribution</p>
+
+  <ul class="pub-list">
+
+    <li class="year-sep" data-year="2026"></li>
+
+    <li>
+      <b class="pub-title">From Signals to Patterns: Non-Invasive Tuberculosis Detection from Cough Audio using Bandit-Weighted Hyperbolic Prototypes</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Sanjam Wadhwa, Muskaan Singh, Ning Ma</span>
+      <div class="pub-actions"><span class="pub-venue">INTERSPEECH 2026</span></div>
+    </li>
+
+    <li>
+      <b class="pub-title">Synergizing Zero-Shot Cross-Lingual Alzheimer Detection with Language-Invariant Multimodal Bi-Geometric Adversarial Learning</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Farhan Sheth*, Muskaan Singh, Juliana Gerard, Paula McClean, KongFatt Wong-Lin</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2026</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2606.17254" target="_blank" rel="noopener">PDF</a>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Bridging the Age Gap: Towards Detecting Neural Audio Codec Synthesized Elderly Speech Deepfake</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Orchid Chetia Phukan*, Girish*, Chi-Chun Lee</span>
+      <div class="pub-actions"><span class="pub-venue">INTERSPEECH 2026</span></div>
+    </li>
+
+    <li>
+      <b class="pub-title">Towards Detecting Neural Audio Codec Synthesized Heart Sounds</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Orchid Chetia Phukan*, Chi-Chun Lee</span>
+      <div class="pub-actions"><span class="pub-venue">INTERSPEECH 2026</span></div>
+    </li>
+
+    <li>
+      <b class="pub-title">Bridging the SEA Gap: An Initial Benchmark for Neural Audio Codec-Synthesized Speech Deepfakes in South-East Asian Languages</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Orchid Chetia Phukan*, Girish*, Arun Balaji Buduru</span>
+      <div class="pub-actions"><span class="pub-venue">IJCAI 2026</span></div>
+    </li>
+
+    <li>
+      <b class="pub-title">Prosody as Supervision: Bridging the Non-Verbal–Verbal Gap for Multilingual Speech Emotion Recognition</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Muskaan Singh</span>
+      <div class="pub-actions">
+        <span class="pub-venue">ACL 2026 Main</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2604.17647" target="_blank" rel="noopener">PDF</a>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">HCFD: A Benchmark for Audio Deepfake Detection in Healthcare</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Muskaan Singh</span>
+      <div class="pub-actions"><span class="pub-venue">ACL 2026 Findings</span></div>
+    </li>
+
+    <li>
+      <b class="pub-title">Indic-CodecFake meets SATYAM: Towards Detecting Neural Audio Codec Synthesized Speech Deepfakes in Indic Languages</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Orchid Chetia Phukan, Girish*, Arun Balaji Buduru</span>
+      <div class="pub-actions"><span class="pub-venue">ACL 2026 Findings</span></div>
+    </li>
+
+    <li>
+      <b class="pub-title"><span class="ital">DIVINE:</span> Coordinating Multimodal Disentangled Representations for Oro-Facial Neurological Disorder Assessment</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Muskaan Singh</span>
+      <div class="pub-actions">
+        <span class="pub-venue">EACL 2026 Main</span>
+        <span class="chip award">Social Impact Award</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2601.07014" target="_blank" rel="noopener">PDF</a>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Bridging Attribution and Open-Set Detection using Graph-Augmented Instance Learning in Synthetic Speech</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Farhan Sheth*, Muskaan Singh</span>
+      <div class="pub-actions"><span class="pub-venue">EACL 2026 Main</span></div>
+    </li>
+
+    <li class="year-sep" data-year="2025"></li>
+
+    <li>
+      <b class="pub-title"><span class="ital">Curved Worlds, Clear Boundaries:</span> Generalizing Speech Deepfake Detection using Hyperbolic and Spherical Geometry Spaces</b>
+      <span class="pub-authors">Farhan Sheth*, Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Muskaan Singh</span>
+      <div class="pub-actions">
+        <span class="pub-venue">IJCNLP-AACL 2025 Main</span>
+        <a class="pdf-badge" href="https://drive.google.com/file/d/1VKSD0kaYQQnKj_ObyCU4s4wNRxutC0I-/view?usp=sharing" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We address generalizable audio deepfake detection across diverse synthesis paradigms, including conventional TTS and modern diffusion or flow-matching generators. Prior work has mostly targeted individual synthesis families and often fails to generalise due to overfitting to generation-specific artifacts. We hypothesise that synthetic speech, irrespective of origin, leaves shared structural distortions in the embedding space that can be aligned through geometry-aware modelling. RHYME fuses utterance-level embeddings from diverse pretrained encoders using non-Euclidean projections, mapping representations into hyperbolic and spherical manifolds and fusing via Riemannian barycentric averaging. RHYME sets new state of the art in cross-paradigm detection.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Towards Attribution of Generators and Emotional Manipulation in Cross-Lingual Synthetic Speech using Geometric Learning</b>
+      <span class="pub-authors">Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Farhan Sheth, Muskaan Singh</span>
+      <div class="pub-actions">
+        <span class="pub-venue">IJCNLP-AACL 2025 Findings</span>
+        <a class="pdf-badge" href="https://drive.google.com/file/d/1lEc8M1nQV39p_YYXck6sgUdPDynUxukU/view" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We address fine-grained traceback of emotional and manipulation characteristics from synthetically manipulated speech. MiCuNet integrates speech foundation model embeddings with spectrogram-based auditory features through a mixed-curvature projection spanning hyperbolic, Euclidean and spherical spaces, guided by learnable temporal gating. In a multitask setup it simultaneously predicts original emotions, manipulated emotions and manipulation sources on the EmoFake dataset across English and Chinese subsets, consistently surpassing conventional fusion strategies. To our knowledge this is the first curvature-adaptive framework for multitask tracking in synthetic speech.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title"><span class="ital">PARROT:</span> Synergizing Mamba and Attention-based SSL Pre-Trained Models via Parallel Branch Hadamard Optimal Transport for Speech Emotion Recognition</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, <b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Swarup Ranjan Behera, Sai Kiran Patibandla, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.01138" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>Mamba-based self-supervised pre-trained models achieve comparable or superior performance to attention-based models for speech emotion recognition. We hypothesise that leveraging the complementary strengths of both will exceed the fusion of homogeneous attention-based models. PARROT integrates parallel branch fusion with optimal transport and the Hadamard product, achieving state-of-the-art results against individual models, homogeneous fusion and baseline fusion techniques.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title"><span class="ital">SNIFR:</span> Boosting Fine-Grained Child Harmful Content Detection Through Audio-Visual Alignment with Cascaded Cross-Transformer</b>
+      <span class="pub-authors">Orchid Chetia Phukan, <b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Swarup Ranjan Behera, Abu Osama, Sarthak Jain, Priyabrata Mallick, Sai Kiran Patibandla, Pailla Balakrishna Reddy, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.03378" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>Malicious users evade moderation systems by embedding unsafe content in minimal frames. While prior research has focused on visual cues, audio features remain underexplored. We embed audio cues with visual for fine-grained child harmful content detection and introduce SNIFR, which employs a transformer encoder for intra-modality interaction followed by a cascaded cross-transformer for inter-modality alignment, achieving superior performance over unimodal and baseline fusion methods.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title"><span class="ital">HYFuse:</span> Aligning Heterogeneous Speech Pre-Trained Representations in Hyperbolic Space for Speech Emotion Recognition</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Swarup Ranjan Behera, Pailla Balakrishna Reddy, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.03403" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>Compression-based representations from neural audio codecs such as EnCodec capture acoustic features like pitch and timbre, while representation-learning-based representations from models such as WavLM encode high-level semantic and prosodic information. Their fusion has not been explored for speech emotion recognition. HYFuse fuses the two by transforming them into hyperbolic space; fusing x-vector and SoundStream achieves top performance against individual representations and homogeneous fusion.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Investigating the Reasonable Effectiveness of Speaker Pre-Trained Models and their Synergistic Power for SingMOS Prediction</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Swarup Ranjan Behera, Pailla Balakrishna Reddy, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.02232" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We focus on singing voice mean opinion score prediction. Prior work has not explored speaker recognition pre-trained models such as x-vector and ECAPA; we hypothesise these will be most effective, since speaker recognition pre-training equips them to capture fine-grained vocal features from synthesised singing voices. Experiments validate the hypothesis. We also introduce BATCH, a fusion framework using Bhattacharyya distance, which sets state of the art.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Towards Machine Unlearning for Paralinguistic Speech Processing</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Shubham Singh, Swarup Ranjan Behera, Vandana Rajan, Muskaan Singh, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.02230" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We pioneer the study of machine unlearning for paralinguistic speech processing, focusing on speech emotion recognition and depression detection. SISA++ extends the previous state-of-the-art SISA method by merging models trained on different shards with weight averaging, preserving performance better after unlearning on CREMA-D and E-DAIC. We also present actionable recommendations for selecting feature representations and downstream architectures that mitigate degradation after unlearning.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Towards Fusion of Neural Audio Codec-based Representations with Spectral Features for Heart Murmur Classification via Bandit-based Cross-Attention</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Swarup Ranjan Behera, Priyabrata Mallick, Santanu Roy, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.01148" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We hypothesise that combining neural audio codec representations such as EnCodec with spectral features such as MFCC yields superior heart murmur classification, since codec representations capture fine-grained acoustic patterns while spectral features focus on frequency-domain properties. BAOMI uses a bandit-based cross-attention mechanism in which an agent weights the most important heads in multi-head cross-attention, mitigating noise, and sets new state of the art.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Towards Source Attribution of Singing Voice Deepfake with Multimodal Foundation Models</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Swarup Ranjan Behera, Priyabrata Mallick, Pailla Balakrishna Reddy, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.03364" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We introduce the task of singing voice deepfake source attribution. We hypothesise that multimodal foundation models such as ImageBind and LanguageBind are most effective, as cross-modality pre-training better captures source-specific characteristics such as timbre, pitch manipulation and synthesis artifacts. COFFE employs Chernoff distance as a novel loss for effective fusion of foundation models, attaining top performance against individual models and baseline fusion methods.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Are Mamba-based Audio Foundation Models the Best Fit for Non-Verbal Emotion Recognition?</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Orchid Chetia Phukan*, Girish*, Swarup Ranjan Behera, Ananda Chandra Nayak, Sanjib Kumar Nayak, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">EUSIPCO 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.02258" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We investigate Mamba-based audio foundation models for non-verbal vocal sounds emotion recognition for the first time, hypothesising that state-space modelling captures intrinsic emotional structures more effectively than attention, which may amplify irrelevant patterns. Experiments validate this. We further propose RENO, which uses Rényi divergence as a novel loss for aligning foundation models and self-attention for better intra-representation interaction, setting state of the art through heterogeneous fusion.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Source Tracing of Synthetic Speech Systems Through Paralinguistic Pre-Trained Representations</b>
+      <span class="pub-authors">Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Orchid Chetia Phukan*, Drishti Singh*, Swarup Ranjan Behera, Pailla Balakrishna Reddy, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">EUSIPCO 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2506.01157" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>Each synthetic speech source embeds distinctive paralinguistic features into its output, reflecting the underlying generation model. We hypothesise that representations from models pre-trained for paralinguistic speech processing will be most effective for source tracing. Our comparative study across paralinguistic, monolingual, multilingual and speaker recognition models validates this. TRIO fuses models using a gated mechanism for adaptive weighting, canonical correlation loss for alignment and self-attention for refinement; fusing TRILLsson and x-vector sets new state of the art.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title"><span class="ital">Strong Alone, Stronger Together:</span> Synergizing Modality-Binding Foundation Models with Optimal Transport for Non-Verbal Emotion Recognition</b>
+      <span class="pub-authors">Orchid Chetia Phukan, <b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Swarup Ranjan Behera, Sishir Kalita, Arun Balaji Buduru, Rajesh Sharma, S. R. Mahadeva Prasanna</span>
+      <div class="pub-actions">
+        <span class="pub-venue">ICASSP 2025</span>
+        <a class="pdf-badge" href="https://ieeexplore.ieee.org/abstract/document/10889257" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We investigate multimodal foundation models for emotion recognition from non-verbal sounds, hypothesising that joint pre-training across modalities better interprets subtle emotional cues that are ambiguous to audio-only models. MATA (Intra-Modality Alignment through Transport Attention) combines LanguageBind and ImageBind, reporting accuracies of 76.47%, 77.40% and 75.12% and F1-scores of 70.35%, 76.19% and 74.63% on ASVP-ESD, JNV and VIVAE, setting state of the art on all three benchmarks.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Are Multimodal Foundation Models All That Is Needed for EmoFake Detection?</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Orchid Chetia Phukan*, Swarup Ranjan Behera, Parabattina Bhagath, Pailla Balakrishna Reddy, Arun Balaji Buduru</span>
+      <div class="pub-actions">
+        <span class="pub-venue">APSIPA-ASC 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2509.16193" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We investigate multimodal foundation models for EmoFake detection, hypothesising they outperform audio foundation models because cross-modal pre-training helps them recognise unnatural emotional shifts and inconsistencies in manipulated audio. Experiments confirm this. SCAR introduces a nested cross-attention mechanism in which representations interact at two sequential stages, plus a self-attention refinement module, achieving state of the art over standalone models and conventional fusion.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Rethinking Cross-Corpus Speech Emotion Recognition Benchmarking: Are Paralinguistic Pre-Trained Representations Sufficient?</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, <b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Swarup Ranjan Behera, Pailla Balakrishna Reddy, Ananda Chandra Nayak, Sanjib Kumar Nayak, Arun Balaji Buduru</span>
+      <div class="pub-actions">
+        <span class="pub-venue">APSIPA-ASC 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2509.16182" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>Recent benchmarks evaluating pre-trained models for cross-corpus speech emotion recognition have overlooked models pre-trained for paralinguistic speech processing, raising reliability concerns since emotion recognition is inherently paralinguistic. Analysing paralinguistic, monolingual, multilingual and speaker recognition representations, we find TRILLsson outperforms the others, reinforcing the need to include paralinguistic models in cross-corpus benchmarks.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title">Investigating Polyglot Speech Foundation Models for Learning Collective Emotion from Crowds</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Panchal Nayak, Priyabrata Mallick, Swarup Ranjan Behera, Parabattina Bhagath, Pailla Balakrishna Reddy, Arun Balaji Buduru</span>
+      <div class="pub-actions">
+        <span class="pub-venue">APSIPA-ASC 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2509.16329" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We investigate polyglot speech foundation models for crowd emotion recognition, hypothesising that pre-training on diverse languages and accents suits the noisy acoustic environments characteristic of crowd settings. Comparing polyglot, monolingual and speaker recognition models across audio durations of 1 s, 500 ms and 250 ms, polyglot models consistently outperform their counterparts, excelling even with extremely short inputs.</p>
+      </div>
+    </li>
+
+    <li>
+      <b class="pub-title"><span class="ital">Beyond Speech and More:</span> Investigating the Emergent Ability of Speech Pre-Trained Models for Classifying Physiological Time-Series Signals</b>
+      <span class="pub-authors">Orchid Chetia Phukan*, Swarup Ranjan Behera*, Girish*, <b class="me">Mohd Mujtaba Akhtar*</b>, Arun Balaji Buduru, Rajesh Sharma</span>
+      <div class="pub-actions">
+        <span class="pub-venue">APSIPA-ASC 2025</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2410.12645" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>We evaluate speech foundation models on a challenging out-of-domain task: classifying physiological time-series signals. We test two hypotheses — that these models generalise to physiological signals by capturing shared temporal patterns, and that multilingual models outperform others due to greater pre-training variability. Experiments on stress recognition using ECG, EMG and EDA show models trained on foundation-model representations outperform those trained on raw signals, with multilingual models achieving the highest accuracy.</p>
+      </div>
+    </li>
+
+    <li class="year-sep" data-year="2024"></li>
+
+    <li>
+      <b class="pub-title"><span class="ital">NeuRO:</span> An Application for Code-Switched Autism Detection in Children</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar*</b>, Girish*, Orchid Chetia Phukan*, Muskaan Singh*</span>
+      <div class="pub-actions">
+        <span class="pub-venue">INTERSPEECH 2024 Show &amp; Tell</span>
+        <a class="pdf-badge" href="https://arxiv.org/pdf/2406.03514" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>Code-switching is a common communication phenomenon where individuals alternate between languages within a single conversation, and detecting autism spectrum disorder in code-switched scenarios presents unique challenges. We build NeuRO, an application that detects potential signs of autism in code-switched conversations, facilitating early intervention and support.</p>
+      </div>
+    </li>
+
+    <li class="year-sep" data-year="2023"></li>
+
+    <li>
+      <b class="pub-title">Speech-Based Alzheimer's Disease Classification System with Noise-Resilient Features Optimization</b>
+      <span class="pub-authors">Virender Kadyan, Puneet Bawa, <b class="me">Mohd Mujtaba Akhtar</b>, Muskaan Singh</span>
+      <div class="pub-actions">
+        <span class="pub-venue">AICS 2023</span>
+        <a class="pdf-badge" href="https://drive.google.com/file/d/1ZypDcRS-Ipii2lLSfaHSnmtkZ06HD9lr/view" target="_blank" rel="noopener">PDF</a>
+        <button class="pdf-badge abs-toggle" type="button" aria-expanded="false">Abstract</button>
+      </div>
+      <div class="abstract-box">
+        <p>Timely identification of speech abnormalities associated with Alzheimer's disease supports effective therapy and disease management. Using the MFCC framework alongside prosodic and statistical features, we extract acoustic properties from pre-processed speech from the Pitt Corpus of DementiaBank and examine feature optimisation in clean and noise-enhanced environments. The combination of MFCC, statistical and prosodic features achieves 98.3% accuracy with a Random Forest classifier.</p>
+      </div>
+    </li>
+
+  </ul>
+
+  <h2 class="pub-heading">Journal publications</h2>
+  <p class="pub-subline">Reverse chronological</p>
+
+  <ul class="pub-list">
+    <li>
+      <b class="pub-title"><span class="ital">Uc-PrUn:</span> Uncertainty-Calibrated Machine Unlearning using Vision–Language Models for Clinical Decision Support</b>
+      <span class="pub-authors">Farhan Sheth, <b class="me">Mohd Mujtaba Akhtar</b>, Girish, Muskaan Singh, Alexander Davey</span>
+      <div class="pub-actions">
+        <span class="pub-venue">ACM Trans. Computing for Healthcare 2026</span>
+        <a class="pdf-badge" href="https://dl.acm.org/doi/abs/10.1145/3820497" target="_blank" rel="noopener">PDF</a>
+      </div>
+    </li>
+    <li>
+      <b class="pub-title"><span class="ital">Optimizing Audio Encryption Efficiency:</span> A Novel Framework Using Double DNA Operations and Chaotic Map-Based Techniques</b>
+      <span class="pub-authors"><b class="me">Mohd Mujtaba Akhtar</b>, Muskaan Singh, Virender Kadyan, Mohit Dua</span>
+      <div class="pub-actions">
+        <span class="pub-venue">Computers &amp; Electrical Engineering 2025</span>
+        <a class="pdf-badge" href="https://www.sciencedirect.com/science/article/pii/S004579062500031X" target="_blank" rel="noopener">PDF</a>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ══════════════ AWARDS ══════════════ -->
+<section class="section spa-section" id="awards" hidden>
+  <h2 class="pub-heading">Awards &amp; service</h2>
+  <p class="pub-subline">Selected</p>
+
+  <ul class="awards-list">
+    <li>
+      <b>Social Impact Award</b>, EACL 2026 — for <i>DIVINE: Coordinating Multimodal Disentangled Representations for Oro-Facial Neurological Disorder Assessment</i>.
+      <span class="award-tags"><span class="chip soft">2026</span><span class="chip award">Award</span></span>
+    </li>
+    <li>
+      <b>Best Paper Award</b>, ISDIA — for research from my M.Tech thesis on audio deepfake detection.
+      <span class="award-tags"><span class="chip soft">2026</span><span class="chip soft">Best paper</span></span>
+    </li>
+    <li>
+      <b>Program Committee</b>, IMPACT-SPEECH 2026 — workshop on bias in speech LLMs, co-located with EMNLP 2026.
+      <span class="award-tags"><span class="chip soft">2026</span><span class="chip soft">Service</span></span>
+    </li>
+    <li>
+      <b>Reviewer</b> — ACM MM 2026, ACL 2026 Industry Track, ICASSP 2026, ICME 2025/2026, <i>Neural Computing and Applications</i>.
+      <span class="award-tags"><span class="chip soft">2024–</span><span class="chip soft">Service</span></span>
+    </li>
+    <li>
+      <b>Volunteer</b>, ISCA Student Advisory Committee — scripting, hosting discussions, post-editing.
+      <span class="award-tags"><span class="chip soft">2024–</span><span class="chip soft">Service</span></span>
+    </li>
+    <li>
+      <b>Attended EUSIPCO 2025</b>, Palermo, Italy (8–12 Sep).
+      <span class="award-tags"><span class="chip soft">2025</span><span class="chip soft">Conference</span></span>
+    </li>
+    <li>
+      <b>Virtusa Engineering Excellence Scholarship</b> — sole recipient in the college, awarded for all-round academic and co-curricular performance.
+      <span class="award-tags"><span class="chip soft">2023</span><span class="chip soft">Scholarship</span></span>
+    </li>
+    <li>
+      <b>First place, National Science Fair</b> — autonomous navigation system using haptic feedback to assist visually impaired users.
+      <span class="award-tags"><span class="chip soft">2022</span><span class="chip soft">Winner</span></span>
+    </li>
+  </ul>
+
+  <!-- REMOVED — school-level awards (Class 9–12) and the unverifiable lab ranking.
+       Restore by uncommenting if you disagree, but see the notes I sent.
+  <li>Best Communicator Award (12th Grade)</li>
+  <li>Innovation in Extracurriculars — School Award (12th)</li>
+  <li>Best All-Rounder Student (12th)</li>
+  <li>Top Scorer, National Mathematics Olympiad (11th)</li>
+  <li>Most Punctual Student — Class 10</li>
+  <li>Sportsmanship Award — School Annual Sports Meet (9th)</li>
+  <li>Our NEST lab ranked among Asia's top research groups …</li>
+  -->
+</section>
+
+<!-- ══════════════ NEWS ══════════════ -->
+<section class="section spa-section" id="news" hidden>
+  <h2 class="pub-heading">News</h2>
+  <p class="pub-subline">Reverse chronological</p>
+
+  <ul class="news-list">
+    <li><span class="news-date">May 2026</span><span>Four papers accepted at <b>INTERSPEECH 2026</b> as first author.</span></li>
+    <li><span class="news-date">May 2026</span><span>Three papers accepted at <b>ACL 2026</b> (1 Main, 2 Findings) as first author.</span></li>
+    <li><span class="news-date">Apr 2026</span><span>One paper accepted at <b>IJCAI 2026</b> as first author.</span></li>
+    <li><span class="news-date">Feb 2026</span><span>Received the <b>Social Impact Award</b> at EACL 2026 for DIVINE.</span></li>
+    <li><span class="news-date">Jan 2026</span><span>Two papers accepted at <b>EACL 2026</b> (Main) as first author.</span></li>
+    <li><span class="news-date">Jan 2026</span><span>Journal paper <b>Uc-PrUn</b> accepted at ACM Transactions on Computing for Healthcare.</span></li>
+    <li><span class="news-date">Oct 2025</span><span>Two papers accepted at <b>IJCNLP-AACL 2025</b> as first author.</span></li>
+    <li><span class="news-date">Sep 2025</span><span>Attended <b>EUSIPCO 2025</b> in Palermo, Italy.</span></li>
+    <li><span class="news-date">Aug 2025</span><span>Four papers accepted at <b>APSIPA-ASC 2025</b> as first author.</span></li>
+    <li><span class="news-date">Jun 2025</span><span>Seven papers accepted at <b>INTERSPEECH 2025</b>, six as first author.</span></li>
+    <li><span class="news-date">Jun 2025</span><span>Two papers accepted at <b>EUSIPCO 2025</b> as first author.</span></li>
+    <li><span class="news-date">Jun 2025</span><span>One paper accepted at <b>ICASSP 2025</b> as second author.</span></li>
+    <li><span class="news-date">Jan 2025</span><span>Published an audio-encryption framework in <b>Computers &amp; Electrical Engineering</b>.</span></li>
+    <li><span class="news-date">Sep 2024</span><span>Research Intern at <b>Reliance Jio AICoE</b>, developing MATA for non-verbal emotion recognition.</span></li>
+    <li><span class="news-date">Jun 2024</span><span>Computer Vision Intern at <b>Suratec</b>, Bangkok — golf swing phase segmentation from monocular video.</span></li>
+    <li><span class="news-date">May 2024</span><span>Graduated <b>B.Tech (UPES)</b>, First Class with Distinction.</span></li>
+    <li><span class="news-date">Jan 2024</span><span>Joined <b>IIIT-Delhi</b> as Research Associate in the Usable Security Group.</span></li>
+    <li><span class="news-date">Nov 2023</span><span>Began research at <b>Ulster University</b> with Dr Muskaan Singh.</span></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">Mohd Mujtaba Akhtar · Last updated July 2026</div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- section routing ---------- */
+  var sections = document.querySelectorAll('.spa-section');
+  var navLinks = document.querySelectorAll('.nav-link');
+  var nav       = document.getElementById('main-nav');
+  var navToggle = document.getElementById('nav-toggle');
+
+  function show(id){
+    if(!document.getElementById(id)) id = 'about';
+    sections.forEach(function(s){ s.hidden = (s.id !== id); });
+    navLinks.forEach(function(l){
+      var on = l.dataset.section === id;
+      l.classList.toggle('active', on);
+      if(on){ l.setAttribute('aria-current','page'); } else { l.removeAttribute('aria-current'); }
+    });
+    nav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+    window.scrollTo({ top:0, behavior:'smooth' });
+  }
+
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('.nav-link, .nav-jump');
+    if(!link) return;
+    var id = link.dataset.section || (link.getAttribute('href')||'').replace('#','');
+    if(!id) return;
+    e.preventDefault();
+    history.replaceState(null,'','#'+id);
+    show(id);
+  });
+
+  window.addEventListener('hashchange', function(){
+    show((location.hash || '#about').slice(1));
+  });
+
+  show((location.hash || '#about').slice(1));
+
+  /* ---------- mobile menu ---------- */
+  navToggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  /* ---------- theme ---------- */
+  var root = document.documentElement;
+  var themeBtn = document.getElementById('toggle-theme');
+
+  function paintTheme(){
+    var dark = root.getAttribute('data-theme') === 'dark';
+    themeBtn.innerHTML = dark
+      ? '<i class="fas fa-sun" aria-hidden="true"></i>'
+      : '<i class="fas fa-moon" aria-hidden="true"></i>';
+    themeBtn.setAttribute('aria-pressed', String(dark));
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+  paintTheme();
+
+  themeBtn.addEventListener('click', function(){
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try{ localStorage.setItem('mma-theme', next); }catch(e){}
+    paintTheme();
+  });
+
+  /* ---------- abstract toggles ---------- */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('.abs-toggle');
+    if(!btn) return;
+    e.preventDefault();
+    var box = btn.closest('li, .sel-meta').querySelector('.abstract-box');
+    if(!box) return;
+    var open = box.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? 'Hide' : 'Abstract';
+  });
+
+})();
+</script>
+</body>
+</html>
